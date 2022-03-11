@@ -13,8 +13,7 @@ int main(void)
 	{
 		putchar(number);
 	}
-	printf("\n");
-
+	putchar('\n');
 
 	return (0);
 }
