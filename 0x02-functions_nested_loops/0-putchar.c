@@ -2,7 +2,9 @@
 #include <string.h>
 
 /**
- * the program prints "_putchar" followed by a new line.
+ * main - entry
+ *
+ * Return: 0
  */
 int main(void)
 {
