@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int n = 612852475143;
+	long n = 612852475143;
 	int div = 2;
 
 	while (div < n)
@@ -22,6 +22,7 @@ int main(void)
 			div = 2;
 		}
 	}
-	printf("%d", n);
+	printf("%ld", n);
 	printf("\n");
+	return (0);
 }
