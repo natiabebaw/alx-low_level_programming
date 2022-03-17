@@ -7,6 +7,8 @@
  */
 int main(void)
 {
+	int n = 612852475143;
+
 	if (n <= 1)
 	{
 		return (0);
