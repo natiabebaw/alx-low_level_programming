@@ -8,27 +8,19 @@
 int main(void)
 {
 	int n = 612852475143;
+	int div = 2;
 
-	if (n <= 1)
+	while (div < n)
 	{
-		return (0);
-	}
-	else
-	{
-		int div = 2;
-
-		while (div < n)
+		if (n % div != 0)
 		{
-			if (n % div != 0)
-			{
-				div++;
-			}
-			else
-			{
-				n = n / div;
-				div = 2;
-			}
+			div++;
 		}
-		printf("%d", n);
+		else
+		{
+			n = n / div;
+			div = 2;
+		}
 	}
+	printf("%d", n);
 }
