@@ -1,5 +1,20 @@
-#include "holberton.h"
+#include "main.h"
 
+/**
+ * string_length - finds the length of a string.
+ * Return: length of c.
+ * @pointer: pointer.
+ */
+int string_length(char *pointer)
+{
+	int c = 0;
+
+	while (*(pointer + c) != '\0')
+	{
+		c++;
+	}
+	return (c);
+}
 /**
  * *_strcpy - copies the string pointed to by src.
  *
@@ -22,20 +37,4 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = '\0';
 	}
 	return (dest);
-}
-
-/**
- * string_length - finds the length of a string.
- * Return: length of c.
- * @pointer: pointer.
- */
-int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
 }
