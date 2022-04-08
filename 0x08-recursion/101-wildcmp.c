@@ -13,7 +13,7 @@
 int checker(char *s1, char *s2, int a, int b, int wildUsed);
 int wildcmp(char *s1, char *s2)
 {
-return (checker(s1, s2, 0, 0, -1));
+	return (checker(s1, s2, 0, 0, -1));
 }
 
 /**
@@ -60,9 +60,9 @@ if (s1[a] != '\0')
 	}
 	else if ((s1[a] == s2[b]) || (s2[b] == '*' && s2[b + 1] == s1[a + 1]))
 		return (checker(s1, s2, a + 1, b + 1, wildUsed));
-
 	if (wildUsed == -1)
 		return (0);
+
 	return (checker(s1, s2, a, wildUsed, wildUsed));
 }
 if (s2[b] != '\0')
