@@ -1,26 +1,19 @@
 #include "main.h"
 
 /**
- * flip_bits - number of different bits between two numbers
- * @n: first number
- * @m: second number
+ * clear_bit - sets the value of a bit to 0 at a given index.
+ * @n: number to set
+ * @index: index at which to set bit
  *
- * Return: number of bits you would need to flip
- * to get from one number to another.
+ * Return: 1 if it worked, or -1 if an error occurred
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int diff, check;
-	unsigned int count, i;
+	unsigned long int set;
 
-	count = 0;
-	check = 1;
-	diff = n ^ m;
-	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
-	{
-		if (check == (diff & check))
-			count++;
-		check <<= 1;
-	}
-	return (count);
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+		return (-1);
+	set = ~(1 << index);
+	*n = *n & set;
+	return (1);
 }
